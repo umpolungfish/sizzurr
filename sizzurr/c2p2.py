@@ -61,7 +61,7 @@ def process_files_in_directory(root_path, files, file_exts, parent_dir, operatio
 
 def main_args(parser):
     parser.add_argument("parent_dir", help="Parent directory path")
-    parser.add_argument("--type", "-t", required=True, nargs='+', help="File extension(s) to search for (e.g., 'pdf', 'txt', 'docx')")
+    parser.add_argument("--type", "-t", required=True, nargs='+', help="One or more file extensions to search for (e.g., pdf txt docx)")
     parser.add_argument("--copy", "-c", action="store_true", help="Copy files instead of moving them")
     parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output")
     parser.add_argument("--dry-run", "-d", action="store_true", help="Simulate without actually moving/copying files")
