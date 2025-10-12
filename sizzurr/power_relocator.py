@@ -437,8 +437,9 @@ def main_args(parser):
     parser.add_argument("--preserve-structure", "-ps", action="store_true", help="Preserve directory structure when using recursive mode")
     parser.add_argument("--include-dirs", "-id", action="store_true", help="Include directories in addition to files")
     parser.add_argument("--copy", "-c", action="store_true", help="Copy files instead of moving")
-    parser.add_argument("--filter", "-f", action="append", help="File patterns to match (e.g., '*.pdf')")
+    parser.add_argument("--filter", "-f", help="Comma-separated file patterns to match (e.g., '*.pdf,*.txt')")
     parser.add_argument("--workers", "-w", type=int, help="Number of worker threads")
+    parser.add_argument("--n-workers", "-n", type=int, help="Number of parallel processes (alias for --workers)")
     parser.add_argument("--memory-budget", "-mb", type=int, default=8192, help="Memory budget in MB (default: 8192)")
     parser.add_argument("--verify", "-vf", action="store_true", help="Verify file integrity with hash comparison")
     parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output")
@@ -455,7 +456,10 @@ def main(args=None):
         args = parser.parse_args()
     
     # Handle parallel alias
-    workers = args.workers or args.parallel
+    workers = args.workers or args.parallel or args.n_workers
+
+    # Process patterns
+    patterns = [p.strip() for p in args.filter.split(',')] if args.filter else None
     
     # Initialize relocator
     relocator = PowerRelocator(
@@ -467,7 +471,7 @@ def main(args=None):
     success = relocator.relocate(
         source_path=args.source,
         dest_path=args.dest,
-        patterns=args.filter,
+        patterns=patterns,
         recursive=args.recursive,
         copy_mode=args.copy,
         verify=args.verify,

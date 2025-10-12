@@ -87,9 +87,9 @@ High-performance file relocation.
 ```
 usage: sizzurr relocate [-h] [--recursive] [--preserve-structure]
                         [--include-dirs] [--copy] [--filter FILTER]
-                        [--workers WORKERS] [--memory-budget MEMORY_BUDGET]
-                        [--verify] [--verbose] [--dry-run]
-                        [--parallel PARALLEL]
+                        [--workers WORKERS] [--n-workers N_WORKERS]
+                        [--memory-budget MEMORY_BUDGET] [--verify]
+                        [--verbose] [--dry-run] [--parallel PARALLEL]
                         source dest
 ```
 
@@ -104,8 +104,9 @@ usage: sizzurr relocate [-h] [--recursive] [--preserve-structure]
 -   `--preserve-structure`, `-ps`: Preserve directory structure when using recursive mode.
 -   `--include-dirs`, `-id`: Include directories in addition to files.
 -   `--copy`, `-c`: Copy files instead of moving.
--   `--filter`, `-f` FILTER: File patterns to match (e.g., '*.pdf').
+-   `--filter`, `-f` FILTER: Comma-separated file patterns to match (e.g., '*.pdf,*.txt').
 -   `--workers`, `-w` WORKERS: Number of worker threads.
+-   `--n-workers`, `-n` N_WORKERS: Number of parallel processes (alias for --workers).
 -   `--memory-budget`, `-mb` MEMORY_BUDGET: Memory budget in MB (default: 8192).
 -   `--verify`, `-vf`: Verify file integrity with hash comparison.
 -   `--verbose`, `-v`: Enable verbose output.
