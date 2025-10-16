@@ -14,7 +14,7 @@ it can take a fat stack of files and cut, paste, or relocate them
 1.  Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/sizzurr.git
+    git clone https://github.com/umpolungfish/sizzurr.git
     cd sizzurr
     ```
 
