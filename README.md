@@ -1,12 +1,12 @@
-# SIZZURR
+# sizzurr
 
-SIZZURR is a collection of powerful command-line utilities written in Python. The main goal is to combine these scripts into a single, globally installed CLI tool. The toolkit is designed for data ingestion, preparation, and management, with a particular focus on AI-related tasks.
+sizzurr is a pair of very sharp cli shear  
+
+it can take a fat stack of files and cut, paste, or relocate them
 
 ## Features
 
 - **`c2p2`**: A simple utility for moving or copying files from subdirectories to their parent directory.
-- **`html2md`**: A sophisticated script for converting HTML files to Markdown, optimized for Retrieval-Augmented Generation (RAG) applications.
-- **`pdf2md`**: An advanced script that uses a vision-language model (Qwen-VL) to convert PDFs to Markdown, preserving complex structures like code, formulas, and tables.
 - **`relocate`**: A high-performance file relocation utility for moving or copying large amounts of data efficiently, using parallel processing and memory mapping.
 
 ## Installation
