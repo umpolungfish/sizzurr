@@ -13,7 +13,7 @@
   &nbsp;
   ![Memory Mapped](https://img.shields.io/badge/Memory-Mapped-%230071C5.svg?style=for-the-badge)
   &nbsp;
-  ![License](https://img.shields.io/badge/License-MIT-%23000000.svg?style=for-the-badge)
+  ![License](https://img.shields.io/badge/License-Public%20Domain-%23000000.svg?style=for-the-badge)
   
 </div>
 
@@ -203,7 +203,7 @@ Benchmark tests show 3-5x speedup compared to traditional file operations on dat
 
 ## LICENSE
 
-`sizzurr` is released under the UNLICENSE. See the UNLICENSE.md file for details.
+`sizzurr` is available in the **public domain**. See [UNLICENSE.md](./UNLICENSE.md) for details.
 
 <br>
 
